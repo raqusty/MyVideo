@@ -13,15 +13,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         text1.setOnClickListener {
-            val uri = Uri.parse("yys://test")
-            val intent = Intent(Intent.ACTION_VIEW, uri)
-            startActivity(intent)
         }
 
         text2.setOnClickListener {
-            val uri = Uri.parse("yiyoushuo://test")
-            val intent = Intent(Intent.ACTION_VIEW, uri)
-            startActivity(intent)
         }
     }
 }
