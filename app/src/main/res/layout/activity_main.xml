@@ -11,7 +11,7 @@
         android:id="@+id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:gravity="center"
         android:text="FirstSection" />
 
@@ -19,7 +19,7 @@
         android:id="@+id/text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:gravity="center"
         android:text="SecondSection" />
 
@@ -27,7 +27,7 @@
         android:id="@+id/text3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:gravity="center"
         android:text="ThirdSection" />
 
@@ -35,7 +35,7 @@
         android:id="@+id/text4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:gravity="center"
         android:text="FourthSection" />
 

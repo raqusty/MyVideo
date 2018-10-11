@@ -1,5 +1,6 @@
 package com.video.raqust.myvideo.secondSection
 
+import android.app.Application
 import android.content.Context
 import android.media.*
 import android.os.Environment
@@ -17,7 +18,7 @@ import java.util.*
  * info: 音源的采集,播放工具
  * AudioRecord 和 AudioTrack API 完成音频 PCM 数据的采集和播放，并实现读写音频 wav 文件
  */
-class VideoUtil {
+object VideoUtil {
     private val TAG = "VideoUtil"
     private val TMP_FOLDER_NAME = "AnWindEar"
     private val RECORD_AUDIO_BUFFER_TIMES = 1
@@ -36,7 +37,7 @@ class VideoUtil {
         (Environment.getExternalStorageDirectory().absolutePath + File.separator + TMP_FOLDER_NAME)
     }
 
-    private var mContext: Context? = null
+    private var mContext: Application? = null
 
     @Volatile
     private var mWindState = WindState.IDLE // 当前状态
@@ -67,7 +68,7 @@ class VideoUtil {
     /**
      * 初始化目录
      */
-    fun init(context: Context) {
+    fun init(context: Application) {
         // 存储在App内  也可以存在SD卡上
         mContext = context
 
@@ -160,7 +161,7 @@ class VideoUtil {
     }
 
     @Synchronized
-    fun isIdle(): Boolean {
+    private fun isIdle(): Boolean {
         return WindState.IDLE == mWindState
     }
 
@@ -168,7 +169,7 @@ class VideoUtil {
      * 音频录制线程
      * 使用FileOutputStream来写文件
      */
-    private inner class AudioRecordThread internal constructor(createWav: Boolean) : Thread() {
+    private class AudioRecordThread internal constructor(createWav: Boolean) : Thread() {
         internal var aRecord: AudioRecord
         internal var bufferSize = 10240
         internal var createWav = false
@@ -236,7 +237,7 @@ class VideoUtil {
      * AudioTrack播放音频线程
      * 使用FileInputStream读取文件
      */
-    private inner class AudioTrackPlayThread internal constructor(aFile: File?) : Thread() {
+    private class AudioTrackPlayThread internal constructor(aFile: File?) : Thread() {
         internal var track: AudioTrack
         internal var bufferSize = 10240
         internal var audioFile: File? = null
