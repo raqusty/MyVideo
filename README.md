@@ -35,6 +35,8 @@
 /**************************************    作业   ********************************************************************/
 
     1.firstSection
+        1.http://www.cnblogs.com/renhui/p/7456956.html (Android中SurfaceView使用详解 )
+        2.https://www.yunyii.cn/article/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZHVvbHVvOS9hcnRpY2xlL2RldGFpbHMvODE2MzA1NjE=
 
     2.secondSection
 

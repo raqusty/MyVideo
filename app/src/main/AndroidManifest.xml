@@ -22,8 +22,9 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".firstSection.FirstSectionActivity"/>
         <activity android:name=".secondSection.SecondSectionActivity"/>
-
+        <activity android:name=".thirdSection.ThirdSectionActivity"/>
     </application>
 
 </manifest>

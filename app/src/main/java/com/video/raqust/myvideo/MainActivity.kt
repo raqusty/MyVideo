@@ -8,7 +8,9 @@ import android.os.Bundle
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
+import com.video.raqust.myvideo.firstSection.FirstSectionActivity
 import com.video.raqust.myvideo.secondSection.SecondSectionActivity
+import com.video.raqust.myvideo.thirdSection.ThirdSectionActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -28,10 +30,17 @@ class MainActivity : AppCompatActivity() {
 
 
         text1.setOnClickListener {
+            val intent = Intent(mContext, FirstSectionActivity::class.java)
+            startActivity(intent)
         }
 
         text2.setOnClickListener {
             val intent = Intent(mContext, SecondSectionActivity::class.java)
+            startActivity(intent)
+        }
+
+        text3.setOnClickListener {
+            val intent = Intent(mContext, ThirdSectionActivity::class.java)
             startActivity(intent)
         }
 
