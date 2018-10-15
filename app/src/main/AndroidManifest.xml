@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
     <application
 
         android:allowBackup="true"
@@ -25,6 +26,7 @@
         <activity android:name=".firstSection.FirstSectionActivity"/>
         <activity android:name=".secondSection.SecondSectionActivity"/>
         <activity android:name=".thirdSection.ThirdSectionActivity"/>
+        <activity android:name=".thirdSection.Nv21VideoActivity"/>
     </application>
 
 </manifest>

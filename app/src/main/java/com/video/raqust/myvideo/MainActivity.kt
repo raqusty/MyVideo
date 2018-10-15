@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
-    var mContext: Context ?=null;
+    var mContext: Context ?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +25,8 @@ class MainActivity : AppCompatActivity() {
             ActivityCompat.requestPermissions(this
                     , arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE
                     , Manifest.permission.WRITE_EXTERNAL_STORAGE
-                    , Manifest.permission.RECORD_AUDIO), 1);
+                    , Manifest.permission.RECORD_AUDIO
+                    ,Manifest.permission.CAMERA), 1)
         }
 
 
