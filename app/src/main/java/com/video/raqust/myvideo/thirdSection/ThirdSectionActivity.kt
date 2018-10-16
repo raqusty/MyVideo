@@ -2,12 +2,8 @@ package com.video.raqust.myvideo.thirdSection
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.Matrix
-import android.graphics.YuvImage
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.view.Surface
 import com.video.raqust.myvideo.R
 import kotlinx.android.synthetic.main.activity_third_section.*
 
@@ -17,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_third_section.*
  * info:
  */
 class ThirdSectionActivity : AppCompatActivity() {
-    var mContext: Context?=null
+    var mContext: Context? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +26,7 @@ class ThirdSectionActivity : AppCompatActivity() {
             video_texture.stopVIdeo()
         }
 
-        text2.setOnClickListener{
+        text2.setOnClickListener {
             video_texture.startVideo()
             surface_view.stopVIdeo()
         }

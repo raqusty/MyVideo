@@ -2,10 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.video.raqust.myvideo">
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
 
         android:allowBackup="true"
@@ -23,10 +25,12 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".firstSection.FirstSectionActivity"/>
-        <activity android:name=".secondSection.SecondSectionActivity"/>
-        <activity android:name=".thirdSection.ThirdSectionActivity"/>
-        <activity android:name=".thirdSection.Nv21VideoActivity"/>
+        <activity android:name=".firstSection.FirstSectionActivity" />
+        <activity android:name=".secondSection.SecondSectionActivity" />
+        <activity android:name=".thirdSection.ThirdSectionActivity" />
+        <activity android:name=".thirdSection.Nv21VideoActivity" />
+        <activity android:name=".fourthSection.FourthSectionActivity" />
+        <activity android:name=".fourthSection.MediaRecorderActivity" />
     </application>
 
 </manifest>

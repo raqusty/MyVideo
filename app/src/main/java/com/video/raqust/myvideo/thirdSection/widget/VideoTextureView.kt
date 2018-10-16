@@ -1,4 +1,4 @@
-package com.video.raqust.myvideo.thirdSection
+package com.video.raqust.myvideo.thirdSection.widget
 
 import android.content.Context
 import android.graphics.SurfaceTexture
@@ -12,7 +12,7 @@ import java.io.IOException
  * time: 2018/10/15.
  * info:
  */
-class VideoTextureView :TextureView, TextureView.SurfaceTextureListener {
+class VideoTextureView : TextureView, TextureView.SurfaceTextureListener {
     private var mCamera: Camera? = null
 
     constructor(context: Context) : super(context) {

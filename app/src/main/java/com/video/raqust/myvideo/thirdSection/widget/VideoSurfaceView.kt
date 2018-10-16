@@ -1,4 +1,4 @@
-package com.video.raqust.myvideo.thirdSection
+package com.video.raqust.myvideo.thirdSection.widget
 
 import android.content.Context
 import android.graphics.PixelFormat
@@ -13,10 +13,10 @@ import java.io.IOException
  * time: 2018/10/15.
  * info:
  */
-class VideoSurfaceView:SurfaceView , SurfaceHolder.Callback{
+class VideoSurfaceView : SurfaceView, SurfaceHolder.Callback {
 
     private val mHolder by lazy { holder }
-    private var mCamera:Camera?=null
+    private var mCamera: Camera? = null
 
     constructor(context: Context) : super(context) {
         initView()
@@ -52,7 +52,7 @@ class VideoSurfaceView:SurfaceView , SurfaceHolder.Callback{
 
     }
 
-    fun startVideo(){
+    fun startVideo() {
         // 打开摄像头并将展示方向旋转90度
         mCamera = Camera.open()
         mCamera?.setDisplayOrientation(90)
@@ -60,12 +60,12 @@ class VideoSurfaceView:SurfaceView , SurfaceHolder.Callback{
             mCamera?.setPreviewDisplay(mHolder)
             mCamera?.startPreview()//开始预览
 
-        } catch ( e: IOException) {
+        } catch (e: IOException) {
             e.printStackTrace()
         }
     }
 
-    fun stopVIdeo(){
+    fun stopVIdeo() {
         mCamera?.release()
     }
 }

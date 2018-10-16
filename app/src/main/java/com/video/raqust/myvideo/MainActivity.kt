@@ -9,13 +9,14 @@ import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import com.video.raqust.myvideo.firstSection.FirstSectionActivity
+import com.video.raqust.myvideo.fourthSection.FourthSectionActivity
 import com.video.raqust.myvideo.secondSection.SecondSectionActivity
 import com.video.raqust.myvideo.thirdSection.ThirdSectionActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
-    var mContext: Context ?=null
+    var mContext: Context? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
                     , arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE
                     , Manifest.permission.WRITE_EXTERNAL_STORAGE
                     , Manifest.permission.RECORD_AUDIO
-                    ,Manifest.permission.CAMERA), 1)
+                    , Manifest.permission.CAMERA), 1)
         }
 
 
@@ -42,6 +43,11 @@ class MainActivity : AppCompatActivity() {
 
         text3.setOnClickListener {
             val intent = Intent(mContext, ThirdSectionActivity::class.java)
+            startActivity(intent)
+        }
+
+        text4.setOnClickListener {
+            val intent = Intent(mContext, FourthSectionActivity::class.java)
             startActivity(intent)
         }
 

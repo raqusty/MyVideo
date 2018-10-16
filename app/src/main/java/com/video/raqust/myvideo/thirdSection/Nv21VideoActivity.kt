@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.Surface
 import com.video.raqust.myvideo.R
-import kotlinx.android.synthetic.main.activity_nv21_video.*
+import kotlinx.android.synthetic.main.activity_third_section_nv21_video.*
 
 /**
  * Created by linzehao
@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.activity_nv21_video.*
 class Nv21VideoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_nv21_video)
+        setContentView(R.layout.activity_third_section_nv21_video)
 
         nv21_video_surface_view.setCallback {
             image.setImageBitmap(rotateBitmap(it, getDegree()))

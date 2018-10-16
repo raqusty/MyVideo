@@ -11,7 +11,7 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        <com.video.raqust.myvideo.thirdSection.VideoSurfaceView
+        <com.video.raqust.myvideo.thirdSection.widget.VideoSurfaceView
             android:id="@+id/surface_view"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -25,7 +25,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:padding="10dp"
-            android:text="上开始" />
+            android:text="开始" />
 
     </LinearLayout>
 
@@ -35,7 +35,7 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        <com.video.raqust.myvideo.thirdSection.VideoTextureView
+        <com.video.raqust.myvideo.thirdSection.widget.VideoTextureView
             android:id="@+id/video_texture"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -49,7 +49,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:padding="10dp"
-            android:text="中开始" />
+            android:text="开始" />
 
     </LinearLayout>
 
@@ -66,7 +66,9 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:padding="20dp"
-            android:text="下开始" />
+            android:text="开始Nv21" />
+
+
     </LinearLayout>
 
 

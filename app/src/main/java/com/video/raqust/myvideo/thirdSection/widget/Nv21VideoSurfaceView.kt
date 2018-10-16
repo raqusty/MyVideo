@@ -1,4 +1,4 @@
-package com.video.raqust.myvideo.thirdSection
+package com.video.raqust.myvideo.thirdSection.widget
 
 import android.content.Context
 import android.graphics.*
@@ -96,13 +96,9 @@ class Nv21VideoSurfaceView : SurfaceView, SurfaceHolder.Callback {
 
                     val bitmap = BitmapFactory.decodeByteArray(mImageBytes, 0, mImageBytes.size, options)
                     mCallback?.invoke(bitmap)
-
                 }
                 mCamera?.startPreview()//开始预览
-
             }
-
-
         } catch (e: IOException) {
             e.printStackTrace()
         }

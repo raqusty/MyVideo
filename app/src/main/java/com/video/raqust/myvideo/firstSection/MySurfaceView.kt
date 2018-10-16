@@ -8,7 +8,6 @@ import android.view.SurfaceHolder
 import android.view.SurfaceView
 
 
-
 /**
  * Created by linzehao
  * time: 2018/10/15.
@@ -70,7 +69,7 @@ class MySurfaceView : SurfaceView, SurfaceHolder.Callback, Runnable {
                     mCanvas = mHolder.lockCanvas()
                     draw()
                 } catch (e: Exception) {
-                    Log.i("linzehao",e.toString())
+                    Log.i("linzehao", e.toString())
                 } finally {
                     if (mCanvas != null)
                         mHolder.unlockCanvasAndPost(mCanvas)//保证每次都将绘图的内容提交
@@ -96,7 +95,7 @@ class MySurfaceView : SurfaceView, SurfaceHolder.Callback, Runnable {
         if (mBitmap != null) {
             val mPaint = Paint()
             mPaint.color = Color.WHITE
-            mCanvas?.drawBitmap(mBitmap,0f,0f,mPaint)
+            mCanvas?.drawBitmap(mBitmap, 0f, 0f, mPaint)
         }
     }
 

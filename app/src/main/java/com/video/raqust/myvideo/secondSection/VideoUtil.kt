@@ -1,12 +1,11 @@
 package com.video.raqust.myvideo.secondSection
 
 import android.app.Application
-import android.content.Context
 import android.media.*
-import android.os.Environment
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
+import com.video.raqust.myvideo.utils.PathUtil
 import java.io.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -20,7 +19,6 @@ import java.util.*
  */
 object VideoUtil {
     private val TAG = "VideoUtil"
-    private val TMP_FOLDER_NAME = "AnWindEar"
     private val RECORD_AUDIO_BUFFER_TIMES = 1
     private val PLAY_AUDIO_BUFFER_TIMES = 1
     private val AUDIO_FREQUENCY = 44100
@@ -30,11 +28,11 @@ object VideoUtil {
     private val AUDIO_ENCODING = AudioFormat.ENCODING_PCM_16BIT
 
     private val cachePCMFolder by lazy {
-        mContext?.filesDir?.absolutePath + File.separator + TMP_FOLDER_NAME
+        PathUtil.getCachePCMFolderPath()
     }
 
     private val wavFolderPath by lazy {
-        (Environment.getExternalStorageDirectory().absolutePath + File.separator + TMP_FOLDER_NAME)
+        PathUtil.getWaveFolderPath()
     }
 
     private var mContext: Application? = null

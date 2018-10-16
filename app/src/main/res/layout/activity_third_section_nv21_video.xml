@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.video.raqust.myvideo.thirdSection.Nv21VideoSurfaceView
+    <com.video.raqust.myvideo.thirdSection.widget.Nv21VideoSurfaceView
         android:id="@+id/nv21_video_surface_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
