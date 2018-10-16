@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.video.raqust.myvideo">
 
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -31,6 +33,9 @@
         <activity android:name=".thirdSection.Nv21VideoActivity" />
         <activity android:name=".fourthSection.FourthSectionActivity" />
         <activity android:name=".fourthSection.MediaRecorderActivity" />
+        <activity android:name=".fourthSection.ShootingActivity" />
+        <activity android:name=".fourthSection.MainActivity" />
+
     </application>
 
 </manifest>

@@ -17,7 +17,7 @@ class FourthSectionActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_fourth_section_media_recorder)
+        setContentView(R.layout.activity_fourth_section)
 
         mContext = this
 
@@ -27,6 +27,8 @@ class FourthSectionActivity : AppCompatActivity() {
         }
 
         text2.setOnClickListener {
+            val intent = Intent(mContext, MainActivity::class.java)
+            startActivity(intent)
         }
 
     }

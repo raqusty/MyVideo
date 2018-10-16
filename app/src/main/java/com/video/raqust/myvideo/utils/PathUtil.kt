@@ -9,22 +9,33 @@ import java.io.File
  * info:
  */
 object PathUtil {
+    private const val VIDEO = "A_VIDEO"
 
-    private const val PCM_FOLDER_NAME = "PCM"
-    private const val WAVE_FOLDER_NAME = "WAVE"
-    private const val MP4_FOLDER_NAME = "MP4"
+    private val PCM_FOLDER_NAME by lazy { VIDEO + File.separator + "PCM" }
+    private val WAVE_FOLDER_NAME by lazy { VIDEO + File.separator + "WAVE" }
+    private val MP4_FOLDER_NAME by lazy { VIDEO + File.separator + "MP4" }
 
     private val mRootPath by lazy { Environment.getExternalStorageDirectory()?.absolutePath + File.separator }
 
     fun getWaveFolderPath(): String {
+        createFoleder(mRootPath + WAVE_FOLDER_NAME)
         return mRootPath + WAVE_FOLDER_NAME
     }
 
     fun getCachePCMFolderPath(): String {
+        createFoleder(mRootPath + PCM_FOLDER_NAME)
         return mRootPath + PCM_FOLDER_NAME
     }
 
-    fun getMP4FolderPath1(): String {
+    fun getMP4FolderPath(): String {
+        createFoleder(mRootPath + MP4_FOLDER_NAME)
         return mRootPath + MP4_FOLDER_NAME
+    }
+
+    private fun createFoleder(path: String) {
+        val dir = File(path)
+        if (!dir.exists()) {
+            dir.mkdir()
+        }
     }
 }
