@@ -12,7 +12,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:padding="20dp"
-        android:text="录制MP4视频" />
+        android:text="录制MP4视频(没有完成)" />
 
 
     <TextView
@@ -22,7 +22,8 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:padding="20dp"
-        android:text="播放MP4视频" />
+        android:text="抽离audio.mp4的音频，抽离video.mp4的视频,并合并成ouput.mp4" />
+
 
 
 </LinearLayout>

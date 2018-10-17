@@ -22,7 +22,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         mContext = this
-        if (ContextCompat.checkSelfPermission(this.applicationContext, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+        val checkReadExternalPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
+        val checkWriteExternalPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        val checkRecordAudioPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO)
+        val checkCameraPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+
+        if (checkReadExternalPermission != PackageManager.PERMISSION_GRANTED
+                || checkWriteExternalPermission != PackageManager.PERMISSION_GRANTED
+                || checkRecordAudioPermission != PackageManager.PERMISSION_GRANTED
+                || checkCameraPermission != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this
                     , arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE
                     , Manifest.permission.WRITE_EXTERNAL_STORAGE
