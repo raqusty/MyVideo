@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.video.raqust.myvideo.fifthSection.widget.BgGLSurfaceView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center" />
+
+
+        <com.video.raqust.myvideo.fifthSection.widget.TriangleGLSurfaceView
+            android:id="@+id/text2"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:gravity="center" />
+
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
+
+
+
+

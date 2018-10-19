@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
+import com.video.raqust.myvideo.fifthSection.FifthSectionActivity
 import com.video.raqust.myvideo.firstSection.FirstSectionActivity
 import com.video.raqust.myvideo.fourthSection.FourthSectionActivity
 import com.video.raqust.myvideo.secondSection.SecondSectionActivity
@@ -58,6 +59,22 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(mContext, FourthSectionActivity::class.java)
             startActivity(intent)
         }
+
+        text5.setOnClickListener {
+            val intent = Intent(mContext, FifthSectionActivity::class.java)
+            startActivity(intent)
+        }
+
+        text6.setOnClickListener {
+        }
+
+        text7.setOnClickListener {
+        }
+
+        text8.setOnClickListener {
+        }
+
+
 
     }
 }

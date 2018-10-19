@@ -10,6 +10,9 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.CAMERA" />
 
+    <!-- 设置OpenGl的版本 OpenGl ES 2.0   -->
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+
     <application
 
         android:allowBackup="true"
@@ -28,14 +31,18 @@
         </activity>
 
         <activity android:name=".firstSection.FirstSectionActivity" />
+
         <activity android:name=".secondSection.SecondSectionActivity" />
+
         <activity android:name=".thirdSection.ThirdSectionActivity" />
         <activity android:name=".thirdSection.Nv21VideoActivity" />
+
         <activity android:name=".fourthSection.FourthSectionActivity" />
         <activity android:name=".fourthSection.MediaRecorderActivity" />
         <activity android:name=".fourthSection.ShootingActivity" />
         <activity android:name=".fourthSection.MainActivity" />
 
+        <activity android:name=".fifthSection.FifthSectionActivity" />
     </application>
 
 </manifest>
